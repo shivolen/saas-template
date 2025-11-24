@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const page = () => {
   return (
     <div className='min-h-screen flex flex-col items-center justify-center px-6'>
@@ -8,8 +10,7 @@ const page = () => {
         <p className='text-lg text-grey-500 mb-6'>
           Start Today , See The Change Tomorrow
         </p>
-        <button className='bg-blue-600 text-white px-6 py-3 rounded-lg'>Get Started
-        </button>
+
         
       </section>
       <section className='mt-16 grid gap-6 max-w-xl w-full'>
@@ -18,8 +19,11 @@ const page = () => {
         <div className='p-4 border rounded-lg'>Dedication </div>
       </section>
       <section className='mt-16'>
+      <Link href='/dashboard'>
       <button className='bg-blue-600 text-white px-6 py-3 rounded-lg'>Start Now
       </button>
+      </Link>
+      
       </section>
     </div>
   )
