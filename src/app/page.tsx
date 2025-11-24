@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import {Button} from "@/components/ui/button";
 const page = () => {
   return (
     <div className='min-h-screen flex flex-col items-center justify-center px-6'>
@@ -19,9 +19,9 @@ const page = () => {
         <div className='p-4 border rounded-lg'>Dedication </div>
       </section>
       <section className='mt-16'>
-      <Link href='/dashboard'>
-      <button className='bg-blue-600 text-white px-6 py-3 rounded-lg'>Start Now
-      </button>
+      <Link href='/sign-in'>
+      <Button>Start Now
+      </Button>
       </Link>
       
       </section>
