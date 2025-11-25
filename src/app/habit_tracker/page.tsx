@@ -1,6 +1,8 @@
+import React from 'react'
+
 const habit_tracker = () => {
   return (
-    <div>habit tracker</div>
+    <div>test</div>
   )
 }
 
