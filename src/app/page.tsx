@@ -1,8 +1,11 @@
-import Link from "next/link"
-import {Button} from "@/components/ui/button";
+import Link from "next/link"  
+import {Button} from "@/components/ui/button";    
+import DisciplineCard from "@/components/DisciplineCard";
+import CTA from "@/components/CTA";
+
 const page = () => {
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center px-6'>
+    <main className='flex flex-col items-center justify-center px-6 py-4'>
       <section className='text-center max-w-xl'>
         <h1 className='text-4xl font-bold mb-4'>
           Change Your Life in 21 Days!
@@ -11,22 +14,35 @@ const page = () => {
           Start Today , See The Change Tomorrow
         </p>
 
-        
+      </section>  
+      <section className='home-section'>
+          <DisciplineCard 
+          
+            id="Accountability"
+            description="Stay accountable to your goals with daily reminders and progress tracking."
+            help= "Custom AI Coach to help you stay accountable to your goals."
+            color="#ffda6e"
+          />
+          <DisciplineCard 
+            id="Discipline"
+            description="Stay disciplined and focused on your goals with daily reminders and progress tracking."
+            help= "Github style contribution tracker to help you stay disciplined and focused on your goals."
+            color="#e5d0ff"
+
+          
+          />
+          <DisciplineCard 
+            id="Dedication"
+            description="Stay dedicated to your goals with daily reminders and progress tracking."
+            help= "Goal Plan and Daily Routine Generator to help you stay dedicated and motivated to your goals."
+            color="#334155"
+          />
       </section>
-      <section className='mt-16 grid gap-6 max-w-xl w-full'>
-        <div className='p-4 border rounded-lg'>Accountability </div>
-        <div className='p-4 border rounded-lg'>Discipline </div>
-        <div className='p-4 border rounded-lg'>Dedication </div>
+      <section>
+        <CTA /> 
       </section>
-      <section className='mt-16'>
-      <Link href='/sign-in'>
-      <Button>Start Now
-      </Button>
-      </Link>
-      
-      </section>
-    </div>
+    </main>
   )
 }
-
+ 
 export default page
