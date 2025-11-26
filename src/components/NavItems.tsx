@@ -1,4 +1,8 @@
+'use client'
 import Link from "next/link"
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+
 const navItems=[
     {label:'Home', href:'/'},
     {label:'Dashboard', href:'/dashboard'},
@@ -6,11 +10,13 @@ const navItems=[
     {label:'Subscription', href:'/subscription'}
 ]
 const NavItems = () => {
+  const pathname = usePathname();  
+  
   return (
     <nav className='flex items-center gap-4 '>
         {navItems.map(({label,href}) => (
-            <Link href={href} key={label}>
-                {label}
+            <Link href={href} key={label} className={cn(pathname === href ? 'text-primary font-semibold' : 'text-gray-500')}>
+                {label} 
             </Link>
 
         ))}
