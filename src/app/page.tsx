@@ -15,20 +15,21 @@ const page = () => {
         </p>
 
       </section>  
-      <section className='home-section'>
+      <section className='home-section flex flex-row gap-6 flex-wrap justify-center '>
           <DisciplineCard 
           
             id="Accountability"
             description="Stay accountable to your goals with daily reminders and progress tracking."
             help= "Custom AI Coach to help you stay accountable to your goals."
             color="#ffda6e"
+            macho = 'Self-Help Partner'
           />
           <DisciplineCard 
             id="Discipline"
             description="Stay disciplined and focused on your goals with daily reminders and progress tracking."
             help= "Github style contribution tracker to help you stay disciplined and focused on your goals."
             color="#e5d0ff"
-
+            macho="21 Days of never giving up"
           
           />
           <DisciplineCard 
@@ -36,6 +37,7 @@ const page = () => {
             description="Stay dedicated to your goals with daily reminders and progress tracking."
             help= "Goal Plan and Daily Routine Generator to help you stay dedicated and motivated to your goals."
             color="#334155"
+            macho = "Tracker to see progress"
           />
       </section>
       <section>
